@@ -31,7 +31,7 @@ export default function Signup() {
 
   const submit = async () => {
   try {
-    await api.post("/auth/signup", form);
+    await api.post("/api/auth/signup", form);
 
     alert("You signed up successfully ✅");
     navigate("/login");
