@@ -17,7 +17,7 @@ export default function Login() {
   const { setUser } = authContext;
 
   const login = async () => {
-    const res = await api.post("/auth/login", { email, password });
+    const res = await api.post("api/auth/login", { email, password });
 
     const { token, user } = res.data;
 
@@ -46,15 +46,6 @@ export default function Login() {
           }
           style={styles.input}
         />
-
-        {/* <input
-          type="password"
-          placeholder="Password"
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setPassword(e.target.value)
-          }
-          style={styles.input}
-        /> */}
         <div style={{ position: "relative" }}>
   <input
     type={showPassword ? "text" : "password"}
